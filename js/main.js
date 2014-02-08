@@ -111,3 +111,43 @@ function buildSwipe() {
     } 
   });
 }
+
+
+
+
+
+//Determines to load related content
+
+//Check if Mobile
+function checkMobile() {
+  if(sw > breakpoint) {
+    mobile = false; //Not Mobile
+  } else {
+    mobile = true; //Mobile
+  }
+  
+  if (!mobile) { //If Not Mobile
+    loadAux(); //Load auxiliary content
+  }
+}
+
+//Set up Auxiliary content
+function loadAux() {
+  var $aux = $('.aux');
+  $aux.each(function(index) {
+    var $this = $(this);
+    var auxLink = $this.find('a');
+    var auxFragment = auxLink.attr('href');
+    var auxContent = $this.find('[role=tabpanel]');
+    if (auxContent.size()===0 && $this.hasClass('loaded')===false) {
+      loadContent(auxFragment,$this);
+    }
+  });
+}
+
+function loadContent(src,container) { // Load Tab Content
+  container.addClass('loaded');
+  $('<div role="tabpanel" />').load(src +' #content > div',function() {
+    $(this).appendTo(container);
+  });
+}

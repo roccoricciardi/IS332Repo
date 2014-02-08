@@ -1,3 +1,6 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+
 <ul  id="nav-anchors" class="nav-anchors">
   <li><a href="#nav" id="menu-anchor">Menu</a></li>
   <li><a href="#search" id="search-anchor">Search</a></li>
@@ -151,3 +154,6 @@ function loadContent(src,container) { // Load Tab Content
     $(this).appendTo(container);
   });
 }
+
+
+</SCRIPT>

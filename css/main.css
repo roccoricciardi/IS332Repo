@@ -22,6 +22,7 @@ html {
  * Customize the background color to match your design.
  */
 
+/* 
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -31,6 +32,21 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
+ */
+
+
+
+/*Using CSS gradients instead of background images*/
+header[role="banner"] {
+  position: relative;
+  background: #111; 
+  background: +linear-gradient (top, #111 0%, #222 100%);
+}
+
+
+
+
+
 
 /*
  * A better looking default horizontal rule

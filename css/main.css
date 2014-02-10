@@ -749,6 +749,45 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /************End Resources**************/
 
+/************Comment Mode**************/
+.has-comment, .has-comment a {
+	cursor: help !important;
+}
+#comment-link a{ 
+	display: block; 
+	background: #9d0000; 
+	color: #fff; 
+	padding: 1em 1.2em; 
+}
+#comment-link a:hover, #comment-link a:focus {
+	background: #c20000;
+}
+#comment-container {
+	background: #333;
+	color: #fff;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 2;	
+	text-align: left;
+	padding: 1em;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+#close-comments {
+	color: #fff;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	text-transform: uppercase;
+	display: none;
+}
+/************End Comment Mode**************/
+
+
+
+
 
 
 
